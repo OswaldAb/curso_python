@@ -1,0 +1,11 @@
+
+# precedencia de operadores
+
+'''
+
+()
+**
+*  /  //  %
++  -
+
+'''
