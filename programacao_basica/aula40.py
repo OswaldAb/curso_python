@@ -5,29 +5,49 @@ while True:
 
     numero_1 = input('\nDigite o primeiro número: ')
     numero_2 = input('Digite o segundo número: ')
+    operador = input('Digite um operador (+ - * /): ') or ''
 
-    numero_1_int = 0
+    numero_1_float = 0
     numero_2_float = 0
-
     converteu = None
+    resultado = 0
 
-    try:
-        numero_1_int = int(numero_1)
-        numero_2_float = int(numero_2)
+    try: # tenta converter os numeros
+        numero_1_float = float(numero_1)
+        numero_2_float = float(numero_2)
         converteu = True
         
     except:
         converteu = None
 
-
     if converteu is None:
-        print('Você digitou valores invalidos!')
+        print('\nVocê digitou valores invalidos!')
+        continue
 
-    else:
-        resultado = numero_1_int * numero_2_float
-        print(f'{numero_1_int} * {numero_2_float} = {resultado}')
+    if len(operador) > 1:
+        print('Digite apenas um operador!')
+        continue
 
-    continuar = input('Deseja continuar (s)im / (n)ão: ').lower().startswith('s')
+    if operador not in '-+/*':
+        print('\nVocê digitou operador invalido!')
+        continue
+
+    match operador:
+        case '-':
+            resultado = numero_1_float - numero_2_float
+        case '+':
+            resultado = numero_1_float + numero_2_float
+        case '/':
+            resultado = numero_1_float / numero_2_float
+        case '*':
+            resultado = numero_1_float * numero_2_float
+        case _:
+            print('Não deveria acontecer isso!')
+
+    print(f'{numero_1} {operador} {numero_2} = {resultado}')
+
+    sair = input('\nDeseja sair (s)air? ').lower().startswith('s')
     
-    if continuar is False:
+    if sair is True:
+        print('Fim do programa!')
         break
