@@ -1,4 +1,7 @@
 import os
+
+'''Exercicio'''
+
 lista_de_compra = list()
 
 while True:
