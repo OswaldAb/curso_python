@@ -1,0 +1,11 @@
+
+'''
+Operação ternario
+
+<valor> if <condição> else <outro valor>
+
+'''
+
+idade = 20
+maior_idade = 'É de maior' if idade >= 18 else 'É de menor'
+print(maior_idade)
