@@ -1,13 +1,16 @@
+# count é um iterador sem fim
+from itertools import count
 
-def somar_listas(lista_1, lista_2):
-    intervalo_maximo = min(len(lista_1), len(lista_2))
+c1 = count()
+r1 = range(10)
 
-    return [
-        x + y
-        for x,y in zip(lista_1, lista_2)
-    ]
+print('c1', hasattr(c1, '__iter__'))
+print('c1', hasattr(c1, '__next__'))
+print('r1', hasattr(r1, '__iter__'))
+print('r1', hasattr(r1, '__next__'))
 
-l1 = [1,2,3,4,5,6,7]
-l2 = [1,2,3,4,]
+for i in c1:
+    if i > 100:
+        break
 
-print(f'{somar_listas(l1, l2)=}')
+    print(i)
