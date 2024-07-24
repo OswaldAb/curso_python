@@ -59,8 +59,8 @@ lista_de_historico = []
 
 while True:
 
-    print('Comandos: listar, desfazer, refazer:')
-    input_usuario = input('Digite uma tarefa ou comando: ')
+    print('Comandos: listar, desfazer, refazer')
+    input_usuario = input('Digite uma tarefa ou comando:')
     input_usuario_lower = input_usuario.lower()
 
     if input_usuario_lower == 'clear':
