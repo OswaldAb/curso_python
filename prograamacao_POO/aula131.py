@@ -31,12 +31,16 @@ class Caneta:
     @property
     def cor_tampa(self):
         return 1 + 2
+    
+    @property
+    def cor_tubo(self):
+        return 'black'
 
 
 caneta = Caneta('Azul')
 print(caneta.cor)
 print(caneta.cor)
 print(caneta.cor)
-print(caneta.cor)
+print(caneta.cor_tubo)
 print(caneta.cor_tampa)
 
