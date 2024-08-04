@@ -1,6 +1,7 @@
 # import uma_linha
 # import varias_linhas
-import documentando_funcoes
+# import documentando_funcoes
+import documentando_classes
 
 
 # print(dir(uma_linha))
@@ -9,6 +10,6 @@ import documentando_funcoes
 # print(uma_linha.__name__)
 
 
-help(documentando_funcoes)
+help(documentando_classes)
 
 # documentando_funcoes.multiplicar()
